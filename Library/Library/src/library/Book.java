@@ -9,13 +9,31 @@ package library;
  * @author fance
  */
 public class Book {
-    public String title, isbn;
-    public Author author;
+    private String title, isbn;
+    private Author author;
 
     public Book(String title, String isbn, Author author) {
            this.title = title;
            this.isbn= isbn;
            this.author = author;
+    }
+    
+    public String getTitle(){
+        if(title.equals("")){
+            return "[No title]";
+        }
+        return title;
+    }
+    
+    public String getISBN(){
+        if(title.equals("")){
+            return "[No ISBN]";
+        }
+        return isbn;
+    }
+    
+    public Author getAuthor(){
+        return author;
     }
     
 }

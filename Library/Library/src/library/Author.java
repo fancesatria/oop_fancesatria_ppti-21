@@ -9,10 +9,17 @@ package library;
  * @author fance
  */
 public class Author {
-    public String name, biography;
+    private String name, biography;
     public Author(String name, String biography) {
         this.name = name;
         this.biography = biography;
     }
     
+    public String getName(){
+        return name;
+    }
+    
+    public String getBiography(){
+        return biography;
+    }
 }

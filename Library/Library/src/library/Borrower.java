@@ -11,7 +11,7 @@ import java.util.*;
  * @author fance
  */
 public class Borrower {
-    public String name;
+    private String name;
     private final List<Book> borrowed;
 
     public Borrower(String name) {
@@ -28,15 +28,19 @@ public class Borrower {
         return -1;
     }
 
-    void displayBorrowedBooks() {
+    public void displayBorrowedBooks() {
         System.out.println(name+" borrowed : ");
         for (Book book : borrowed) {
-            System.out.println(" Title: " + book.title);
-            System.out.println(" ISBN: " + book.isbn);
-            System.out.println(" Author: " + book.author);
-            System.out.println(" Biography: " + book.author.biography);
+            System.out.println(" Title: " + book.getTitle());
+            System.out.println(" ISBN: " + book.getISBN());
+            System.out.println(" Author: " + book.getAuthor().getName());
+            System.out.println(" Biography: " + book.getAuthor().getBiography());
             System.out.println("--------------------------------------------");
         }
+    }
+    
+    public String getName(){
+        return name;
     }
     
 }
