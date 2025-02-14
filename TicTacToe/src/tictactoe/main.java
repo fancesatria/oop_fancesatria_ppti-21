@@ -5,15 +5,15 @@ package tictactoe;
  *
  * @author fance
  */
-public class main {
+public class Main {
     
-    public main(){
+    public Main(){
         Game game = new Game("O", "X"); // set default pemain O dan X
         game.play();
     }
 
     public static void main(String[] args) {
-        new main();
+        new Main();
     }
     
 }
